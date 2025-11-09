@@ -1,15 +1,30 @@
+
+import { CmspageModule } from './cmspage/cmspage.module';
+
+import { BlogpostModule } from './blogpost/blogpost.module';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import {HttpClientModule} from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
+import { BannerComponent } from './banner/banner.component';
+
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HeaderComponent,
+    FooterComponent,
+    BannerComponent,
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
+    CmspageModule,
     AppRoutingModule
   ],
   providers: [],

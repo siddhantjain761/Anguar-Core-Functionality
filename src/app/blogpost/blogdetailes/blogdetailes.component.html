@@ -1,0 +1,27 @@
+<section class="blog-detail mtb-40">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8">
+        <div class="blog-left">
+                    <h1>Sample blog post 1</h1>
+                    <div class="posted-on">
+                        <p>by <span>{{blogview.title}}</span> on <span>{{blogview.created_at | date}}</span></p>
+                    </div>
+                    <div class="detail-img">
+             <img src="http://127.0.0.1:8000/upload/blog/{{blogview.image}}" class="d-block w-100"   style="width: 50%;height: 50%;" alt="blog1" />
+                    </div>
+                    <div class="blog-desc">
+                      <p>{{blogview.description}}</p>
+               </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="blog-right">
+                    <app-blogpostrecent></app-blogpostrecent>
+                    <app-categories></app-categories>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,24 @@
+<section class="featured-blog mtb-40">
+  <div class="container">
+
+    <div class="row">
+
+      <div class="col-md-4" *ngFor="let data of blogdata">
+
+        <div class="blog-box">
+          <img src="http://127.0.0.1:8000/upload/blog/{{data.image}}" class="d-block w-100"   style="width: 50%;height: 50%;" alt="blog1">
+
+          <h3>Sample blog post 1</h3>
+          <p>by <span>Siddhant_blog</span> on <span>{{data.created_at | date}}</span></p>
+          <p>{{data.description}}</p>
+          <a routerLink='blogdetail/{{data.id}}'  class="btn btn-danger">Read more...</a>
+        </div>
+
+
+        </div>
+
+
+    </div>
+
+  </div>
+</section>
