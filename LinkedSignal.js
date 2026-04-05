@@ -56,3 +56,20 @@ computation: () => 1         // linkedSignal value = 1, regardless of source
 
 // computation uses source partially
 computation: (p) => p.minOrderQty  // linkedSignal value = some property of source
+
+// example
+amount = linkedSignal({
+  source: this.product,
+  computation: () => 1,
+});
+
+amount.set(42); // override manually
+
+// product changes...
+this.product.set(newProduct);
+
+console.log(amount()); // 1 ✅ — reset! computation ran
+
+
+
+
